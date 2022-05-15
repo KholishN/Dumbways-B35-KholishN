@@ -1,38 +1,37 @@
-const penerima = "kholisnurfajri1@gmail.com"
-
-function submitForm() {
+function submitForm(){
     let name = document.getElementById("name").value;
-    let email = document.getElementById("input-email").value;
-    let phone = document.getElementById("phone-number").value;
+    let email = document.getElementById("email").value;
+    let number = document.getElementById("number").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
-
+    let emailReceiver = "kholisnurfajri1@gmail.com";
+    
     console.log(name);
     console.log(email);
-    console.log(phone);
+    console.log(number);
     console.log(subject);
     console.log(message);
-
-
+    
+    
     if (name == ""){
-        alert("Tolong Isi Nama Kamu");
+        alert("Isi Nama Anda!!!")
     };
+    
     if (email == ""){
-        alert("Tolong Isi Email Kamu");
+        alert("Isi Email Anda!!!")
     };
     
-    if (phone == ""){
-        alert("Tolong Isi Nomor Handphone Kamu");
+    if (number == ""){
+        alert("Isi Nomor Handphone Anda!!!")
     };
     
-    
-
-
-    let a = document.createElement("a");
-
-    a.href=`mailto:${penerima}?subject=${subject}&Body=Hey,My Name is${name},${subject},${message}`
+    let a = document.createElement ("a");
+    a.href = `mailto:${emailReceiver}?subject=${subject}&body=Hi my name is ${name}, ${number}, ${message}`;
     a.click();
     
-};
-
-
+    }
+    
+    
+    
+    
+    
